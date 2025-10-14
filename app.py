@@ -9,8 +9,8 @@ from crewai import Agent, Task, Crew
 
 warnings.filterwarnings("ignore")
 load_dotenv()
-os.environ["OPENAI_MODEL_NAME"] = "gpt-4"
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+os.environ["OPENAI_MODEL_NAME"] = st.secrets["OPENAI_MODEL_NAME"]
+OPENAI_API_KEY = st.secrets["OPENAI_API_KEY"]
 
 # ---------------- Page Setup ----------------
 st.set_page_config(page_title="🤖 Multi-Agent Blog Creator", layout="wide")
